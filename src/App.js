@@ -10,11 +10,11 @@ class App extends Component {
   }
 
   handleItem = (event) => {
+    event.preventDefault()
     this.setState({items: [this.state.text, ...this.state.items]})
   }
 
   handleChange = (event) => {
-    event.preventDefault
     console.log("This is this ",this)
     this.setState({ text: event.target.value })
   }
